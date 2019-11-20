@@ -1,4 +1,4 @@
-#!C:\Users\student\Desktop\pjt_10\venv\Scripts\python.exe
+#!c:\users\student\desktop\project10\venv\scripts\python.exe
 # EASY-INSTALL-ENTRY-SCRIPT: 'autopep8==1.4.4','console_scripts','autopep8'
 __requires__ = 'autopep8==1.4.4'
 import re
