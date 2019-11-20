@@ -5,7 +5,7 @@ from .models import Movie, Genre, Review
 
 class MovieAdmin(admin.ModelAdmin):
     list_display = ('pk', 'title', 'audience',
-                    'poster_url', 'description', 'genre_id')
+                    'poster_url', 'description')
 
 
 admin.site.register(Movie, MovieAdmin)

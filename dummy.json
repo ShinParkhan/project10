@@ -1,9 +1,16 @@
 [
 {
   "model": "movies.genre",
-  "pk": 2,
+  "pk": 1,
   "fields": {
     "name": "\uc561\uc158"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 2,
+  "fields": {
+    "name": "\ucf54\ubbf8\ub514"
   }
 },
 {
@@ -24,13 +31,6 @@
   "model": "movies.genre",
   "pk": 5,
   "fields": {
-    "name": "\ucf54\ubbf8\ub514"
-  }
-},
-{
-  "model": "movies.genre",
-  "pk": 6,
-  "fields": {
     "name": "\uc2a4\ub9b4\ub7ec"
   }
 },
@@ -38,13 +38,14 @@
   "model": "movies.movie",
   "pk": 1,
   "fields": {
-    "title": "SSAFY",
-    "audience": 500,
+    "title": "\uccab\ubc88\uc9f8 \uc601\ud654",
+    "audience": 10,
     "poster_url": "https://ssl.pstatic.net/static/movie/2012/06/dft_img203x290.png",
-    "description": "\ucf54\ub529\uc9c0\uc625",
-    "genre": 4,
-    "like_users": [
-      1
+    "description": "\uc601\ud654",
+    "like_users": [],
+    "genres": [
+      3,
+      5
     ]
   }
 },
@@ -52,8 +53,8 @@
   "model": "movies.review",
   "pk": 1,
   "fields": {
-    "content": "\ubb34\uc12d\ub124\uc694",
-    "score": 1,
+    "content": "\uc7ac\ubc0c\ub124\uc694",
+    "score": 10,
     "movie": 1,
     "user": 1
   }
