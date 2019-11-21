@@ -277,22 +277,13 @@ def userdetail(request, user_pk):
 ## 4. 결과
 
 
+https://user-images.githubusercontent.com/52685256/69300650-2cb57900-0c57-11ea-8c84-d2e4e61ef22e.png
 
-![accounts_userdetail](C:\Users\student\Desktop\pjt_10\images\accounts_userdetail.png)
+https://user-images.githubusercontent.com/52685256/69300652-2cb57900-0c57-11ea-80d4-f70896188b86.png
 
+https://user-images.githubusercontent.com/52685256/69300654-2d4e0f80-0c57-11ea-848b-ec7e0456bfe4.png
 
-
-![accounts_userlist](C:\Users\student\Desktop\pjt_10\images\accounts_userlist.png)
-
-
-
-
-
-![movies_detail](C:\Users\student\Desktop\pjt_10\images\movies_detail.png)
-
-
-
-![movies_index](C:\Users\student\Desktop\pjt_10\images\movies_index.png)
+https://user-images.githubusercontent.com/52685256/69300656-2d4e0f80-0c57-11ea-853f-a3ea1a88ca58.png
 
 ## 5. 느낀점
 
