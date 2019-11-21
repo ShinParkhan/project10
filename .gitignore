@@ -1,6 +1,8 @@
 
-# Created by https://www.gitignore.io/api/venv,python,django
-# Edit at https://www.gitignore.io/?templates=venv,python,django
+
+# Created by https://www.gitignore.io/api/venv,python,django,visualstudiocode
+# Edit at https://www.gitignore.io/?templates=venv,python,django,visualstudiocode
+
 
 ### Django ###
 *.log
@@ -154,6 +156,13 @@ dmypy.json
 
 # SageMath parsed files
 
+### VisualStudioCode ###
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
 # Spyder project settings
 
 # Rope project settings
@@ -166,9 +175,7 @@ dmypy.json
 
 # Pyre type checker
 
-### venv ###
-# Virtualenv
-# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+
 [Bb]in
 [Ii]nclude
 [Ll]ib
@@ -185,4 +192,6 @@ env.bak/
 venv.bak/
 pip-selfcheck.json
 
-# End of https://www.gitignore.io/api/venv,python,django
+
+# End of https://www.gitignore.io/api/venv,python,django,visualstudiocode
+
