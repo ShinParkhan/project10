@@ -1,41 +1,51 @@
 {% extends 'movies/base.html' %}
 {% block content %}
-  <h1>DETAIL</h1>
-  <hr>
-  <p>{{ movie.user }}</p>
-  <p>{{ movie.pk }}</p>
-  <p>{{ movie.title }}</p>
-  <img src="{{ movie.poster_url }}" alt="img">
-  <p>{{ movie.audience }}</p>
-  <p>{{ movie.description }}</p>
-  {% for genre in genres %}
-  <p>{{ genre.name }}</p>
-  {% endfor %}
-  {% for review in reviews %}
-  <div>댓글 {{ forloop.revcounter }} : {{ review.content }} / 평점 : {{ review.score }}
-  {% if request.user == comment.user %}
-    <form action="{% url 'movies:reviews_delete' movie.pk review.pk %}" method='POST'>
-      {% csrf_token %}
-      <input type="submit" value="DELETE">
-    </form>
-  {% endif %}
+<h1 class="text-center">DETAIL</h1>
+<hr>
+<img src="{{ movie.poster_url }}" alt="img"
+  style=" border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 300px;">
+<div class="card" style="width: 500px;">
+  <div class="card-body">
+    <h4 class="card-title">{{ movie.title }}</h4>
+    <h6 class="card-subtitle mb-2 text-muted">누적 관객: {{ movie.audience }}</h6>
+    <h6><b>줄거리</b></h6>
+    <p class="card-text">{{ movie.description }}
+    </p>
+    {% for genre in genres %}
+    <b>{{ genre.name }}</b>
+    {% endfor %}
   </div>
-  {% empty %}
-  <p><b>댓글이 없습니다.</b></p>
-  {% endfor %}
-  <hr>
-  {% if request.user.is_authenticated %}
-  <form action="{% url 'movies:reviews_create' movie.pk %}" method="POST">
+</div>
+
+
+{% for review in reviews %}
+<div>
+  <h4>댓글
+  </h4>
+  <a href="{% url 'accounts:userdetail' review.user.pk %}">{{ review.user }}</a> 댓글 {{ forloop.revcounter }} :
+  {{ review.content }} / 평점 : {{ review.score }}
+  {% if request.user == comment.user %}
+  <form action="{% url 'movies:reviews_delete' movie.pk review.pk %}" method='POST'>
+    {% csrf_token %}
+    <input type="submit" value="DELETE">
+  </form>
+  {% endif %}
+</div>
+{% empty %}
+<p><b>댓글이 없습니다.</b></p>
+{% endfor %}
+<hr>
+{% if request.user.is_authenticated %}
+<form action="{% url 'movies:reviews_create' movie.pk %}" method="POST">
   {% csrf_token %}
   {{ review_form }}
   <input type="submit" value="submit">
-  </form>
-  <!--
+</form>
+<!--
   {% else %}
   <a href="{% url 'accounts:login' %}">[댓글을 작성하려면 로그인 하세요]</a>
   {% endif %}
 -->
-  <hr>
-  <a href="{% url 'movies:index' %}">[BACK]</a>
+<hr>
+<a href="{% url 'movies:index' %}">[BACK]</a>
 {% endblock content %}
-

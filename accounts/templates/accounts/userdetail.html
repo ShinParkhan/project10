@@ -1,31 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'movies/base.html' %}
+{% block content %}
+<h2>{{ user1.username }} 님의 상세 보기</h2>
+<hr>
+<h4>{{ user1.username }} 님이 리뷰한 영화들</h4>
+{% for review in user1.review_set.all %}
+<p>영화 : {{ review.movie }}</p>
+<p>한 줄 평 :{{ review.content }}</p>
+<p>평점 : {{ review.score }}</p>
+{% endfor %}
+<hr>
+<h4>{{ user1.username }} 님이 좋아요한 영화</h4>
+{% for movie in user1.like_movies.all  %}
+<ul>
+  <li>{{ movie }}</li>
+</ul>
+{% endfor %}
+<hr>
+{% if user.is_authenticated %}
+{% if user in user1.followers.all %}
+<a class="btn btn-primary btn-sm" href="{% url 'movies:follow' user1.pk %}" role="button">Unfollow</a>
+<!-- person.pk 게시글 쓴 사람??-->
+{% else %}
+<a class="btn btn-primary btn-sm" href="{% url 'movies:follow' user1.pk %}" role="button">follow</a>
+{% endif %}
+{% endif %}
+<hr>
+<h4>Followers : {{ user1.followers.all|length }}</h4>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-
-<body>
-  <h2>{{ user.username }} 님의 상세 보기</h2>
-  <hr>
-  <h4>{{ user.username }} 님이 리뷰한 영화들</h4>
-  {% for review in user.review_set.all %}
-  <p>영화 : {{ review.movie }}</p>
-  <p>한 줄 평 :{{ review.content }}</p>
-  <p>평점 : {{ review.score }}</p>
-  {% endfor %}
-  <hr>
-  <h4>{{ user.username }} 님이 좋아요한 영화</h4>
-  {% for movie in user.like_movies.all  %}
-  <ul>
-    <li>{{ movie }}</li>
-  </ul>
-  {% endfor %}
-  <hr>
-  <h1>FOLLOW 구현하기</h1>
-</body>
-
-</html>
+{% for user in user1.followers.all %}
+<ul>
+  <li>{{ user }}</li>
+</ul>
+{% endfor %}
+<hr>
+<h4>Followings: {{ user1.followings.all|length }}</h4>
+{% for user in user1.followings.all %}
+<ul>
+  <li>{{ user }}</li>
+</ul>
+{% endfor %}
+{% endblock content %}

@@ -2,23 +2,21 @@
 {% block content %}
 <h1 class="text-center">Movies List</h1>
 <hr>
-<div class="container">
 <div class="row justify-content-between">
-{% for movie in movies %}
-<div class="card" style="width: 18rem;">
-  <a href="{% url 'movies:detail' movie.pk %}"><img src="{{ movie.poster_url }}" alt="img"></a>
-  <div class="card-body">
-    <h5 class="card-title">{{ movie.title }}</h5>
-    <a href="{% url 'movies:like' movie.pk %}">
-      {% if user in movie.like_users.all %}
-      <i class="fab fa-gratipay" style="font-size: 20px; color: crimson;"></i>
-      {% else %}
-      <i class="fab fa-gratipay" style="font-size: 20px; color: black;"></i>
-      {% endif %}
-    </a>
-  </div>
+  {% for movie in movies %}
+  <div class="card mb-3" style="width: 18rem;">
+    <a href="{% url 'movies:detail' movie.pk %}"><img src="{{ movie.poster_url }}" class="card-img-top" alt="img"></a>
+    <div class="card-body">
+      <h5 class="card-title">{{ movie.title }}</h5>
+      <a href="{% url 'movies:like' movie.pk %}">
+        {% if user in movie.like_users.all %}
+        <i class="fab fa-gratipay" style="font-size: 20px; color: crimson;"></i>
+        {% else %}
+        <i class="fab fa-gratipay" style="font-size: 20px; color: black;"></i>
+        {% endif %}
+      </a>
+    </div>
   </div>
   {% endfor %}
-</div>
 </div>
 {% endblock content %}

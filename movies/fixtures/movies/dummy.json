@@ -1,0 +1,645 @@
+[
+{
+  "model": "movies.genre",
+  "pk": 1,
+  "fields": {
+    "name": "\uc561\uc158"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 2,
+  "fields": {
+    "name": "\ub85c\ub9e8\uc2a4"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 3,
+  "fields": {
+    "name": "\ud638\ub7ec"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 4,
+  "fields": {
+    "name": "\ub4dc\ub77c\ub9c8"
+  }
+},
+{
+  "model": "movies.genre",
+  "pk": 5,
+  "fields": {
+    "name": "\uc2a4\ub9b4\ub7ec"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "accounts",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "movies",
+    "model": "genre"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "movies",
+    "model": "movie"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "movies",
+    "model": "review"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "dzgbuqeye74fcemt1gia5zwh051mcmc0",
+  "fields": {
+    "session_data": "YTNlZjBkOTdlZWYwMWJhYzA2MjBjY2UwODI4NTU2YjI5MGE4MTE4NTp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIyNDM5YjBkOGFhZThhMDQ2MmQ4YTE4YWM5MWM0NTBhZjZlN2M1NWFiIn0=",
+    "expire_date": "2019-12-05T02:05:36.363Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qeir5o0z8gcehk98e7p4zkrtox8908iu",
+  "fields": {
+    "session_data": "MTkwNjI3MjhlMzNhOTdiYzQ3YWU1MTI2MGEzZjdiMTA3OWExNTIxNTp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIwNDQwZmFiMzM3MDA1MTI2OGNjZjQyZDY4MzdiZmZjZTgyODJiZjIxIn0=",
+    "expire_date": "2019-12-04T08:31:53.647Z"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 1,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 1,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 1,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 1,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add genre",
+    "content_type": 2,
+    "codename": "add_genre"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change genre",
+    "content_type": 2,
+    "codename": "change_genre"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete genre",
+    "content_type": 2,
+    "codename": "delete_genre"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view genre",
+    "content_type": 2,
+    "codename": "view_genre"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add movie",
+    "content_type": 3,
+    "codename": "add_movie"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change movie",
+    "content_type": 3,
+    "codename": "change_movie"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete movie",
+    "content_type": 3,
+    "codename": "delete_movie"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view movie",
+    "content_type": 3,
+    "codename": "view_movie"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add review",
+    "content_type": 4,
+    "codename": "add_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change review",
+    "content_type": 4,
+    "codename": "change_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete review",
+    "content_type": 4,
+    "codename": "delete_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view review",
+    "content_type": 4,
+    "codename": "view_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 5,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 5,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 5,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 5,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 6,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 6,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 6,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 6,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 7,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 7,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 7,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 7,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 8,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 8,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 8,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 8,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 9,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 9,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 9,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 9,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$fSgkU4wtoO8B$UesY1Fv37Cx8ZDB16tvBzZdrvQpF8HvFZZAjW791M4g=",
+    "last_login": "2019-11-21T01:04:02.024Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-11-20T06:57:04.264Z",
+    "groups": [],
+    "user_permissions": [],
+    "followers": [
+      2
+    ]
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$4Q8WubhxgQZ0$L9OwxoZlqpOf7W0g67vLO3/MhwFmRzKSFOTigeyrf5s=",
+    "last_login": "2019-11-21T02:05:36.357Z",
+    "is_superuser": true,
+    "username": "admin2",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-11-20T06:57:10.093Z",
+    "groups": [],
+    "user_permissions": [],
+    "followers": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$QbmLXRBr14rA$7vast02JRDDMIU9xxG+RaEsQ/ELkCuvok+8TEzc2nbU=",
+    "last_login": "2019-11-20T08:31:53.639Z",
+    "is_superuser": false,
+    "username": "admin3",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-11-20T08:31:53.467Z",
+    "groups": [],
+    "user_permissions": [],
+    "followers": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$JCfgNLKVAbbU$Czm+8MRGjA2jgbOT1kpoY23t8E/I34jh84co5Y+Y8HE=",
+    "last_login": "2019-11-21T00:53:48.304Z",
+    "is_superuser": false,
+    "username": "admin4",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-11-21T00:53:48.129Z",
+    "groups": [],
+    "user_permissions": [],
+    "followers": []
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 1,
+  "fields": {
+    "title": "\ube14\ub799\uba38\ub2c8",
+    "audience": 1275187,
+    "poster_url": "https://movie-phinf.pstatic.net/20191113_203/1573610067050zNCj1_JPEG/movie_image.jpg",
+    "description": "\uace0\ubc1c\uc740 \uc758\ubb34! \uc218\uc0ac\ub294 \uc9c1\uc9c4!\r\n\ud560\ub9d0\uc740 \ud558\uace0 \uae54 \uac74 \uae50\ub2e4!\r\n\uc77c\uba85 \uc11c\uc6b8\uc9c0\uac80 \u2018\ub9c9\ud504\ub85c\u2019! \uac80\ucc30 \ub0b4\uc5d0\uc11c \uac70\uce68\uc5c6\uc774 \ub9c9 \ub098\uac00\ub294 \ubb38\uc81c\uc801 \uac80\uc0ac\ub85c\r\n \uc774\ub984\uc744 \ub0a0\ub9ac\ub294 \u2018\uc591\ubbfc\ud601\u2019\uc740 \uc790\uc2e0\uc774 \uc870\uc0ac\ub97c \ub2f4\ub2f9\ud55c \ud53c\uc758\uc790\uac00 \uc790\uc0b4\ud558\ub294 \uc0ac\uac74\uc73c\ub85c \uc778\ud574\r\n \ud558\ub8e8 \uc544\uce68\uc5d0 \ubcbc\ub791 \ub05d\uc5d0 \ub0b4\ubab0\ub9b0\ub2e4. \uc5b5\uc6b8\ud55c \ub204\uba85\uc744 \ubc97\uae30 \uc704\ud574 \ub0b4\ub9c9\uc744 \ud30c\ud5e4\uce58\ub358 \uadf8\ub294\r\n \ud53c\uc758\uc790\uac00 \ub300\ud55c\uc740\ud589 \ud5d0\uac12 \ub9e4\uac01\uc0ac\uac74\uc758 \uc911\uc694 \uc99d\uc778\uc774\uc5c8\uc74c\uc744 \uc54c\uac8c \ub41c\ub2e4.\r\n \r\n \uadfc\uac70\ub294 \uc758\ubb38\uc758 \ud329\uc2a4 5\uc7a5! \uc790\uc0b0\uac00\uce58 70\uc870 \uc740\ud589\uc774 1\uc870 7\ucc9c\uc5b5\uc6d0\uc5d0 \ub118\uc5b4\uac04\r\n \ud76c\ub300\uc758 \uc0ac\uac74 \uc55e\uc5d0\uc11c \u2018\uc591\ubbfc\ud601\u2019 \uac80\uc0ac\ub294 \uae08\uc735\uac10\ub3c5\uc6d0, \ub300\ud615 \ub85c\ud38c, \ud574\uc678\ud380\ub4dc \ud68c\uc0ac\uac00 \ub4a4\uc5bd\ud78c\r\n \uac70\ub300\ud55c \uae08\uc735 \ube44\ub9ac\uc758 \uc2e4\uccb4\uc640 \ub9c8\uc8fc\ud558\uac8c \ub418\ub294\ub370\u2026\r\n \r\n \ub300\ud55c\ubbfc\uad6d \ucd5c\ub300\uc758 \uae08\uc735\uc2a4\uce94\ub4e4, \uc0ac\uac74\uc740 \uc544\uc9c1 \ub05d\ub098\uc9c0 \uc54a\uc558\ub2e4!",
+    "like_users": [
+      1
+    ],
+    "genres": [
+      1,
+      4
+    ]
+  }
+},
+{
+  "model": "movies.review",
+  "pk": 1,
+  "fields": {
+    "content": "\uc7ac\ubc0c\ub124\uc694",
+    "score": 6,
+    "movie": 1,
+    "user": 1
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2019-11-20T07:30:15.663Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "1",
+    "object_repr": "\uc561\uc158",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2019-11-20T07:30:18.622Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "2",
+    "object_repr": "\ub85c\ub9e8\uc2a4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2019-11-20T07:30:20.842Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "3",
+    "object_repr": "\ud638\ub7ec",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2019-11-20T07:30:22.564Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "4",
+    "object_repr": "\ub4dc\ub77c\ub9c8",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2019-11-20T07:30:24.310Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "5",
+    "object_repr": "\uc2a4\ub9b4\ub7ec",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2019-11-20T07:33:31.266Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "\ube14\ub799\uba38\ub2c8",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2019-11-20T07:33:46.499Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "\uc7ac\ubc0c\ub124\uc694",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+}
+]

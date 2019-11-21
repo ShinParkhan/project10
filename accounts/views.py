@@ -13,20 +13,20 @@ def userlist(request):
 
 
 def userdetail(request, user_pk):
-    user = get_object_or_404(User, pk=user_pk)
-    context = {'user': user}
+    user1 = get_object_or_404(User, pk=user_pk)
+    context = {'user1': user1}
     return render(request, 'accounts/userdetail.html', context)
 
 
 def signup(request):
     if request.user.is_authenticated:
-        return redirect('accounts:userlist')
+        return redirect('movies:index')
     if request.method == "POST":
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
             auth_login(request, user)
-            return redirect('accounts:userlist')
+            return redirect('movies:index')
     else:
         form = CustomUserCreationForm()
     context = {'form': form}
@@ -35,12 +35,12 @@ def signup(request):
 
 def login(request):
     if request.user.is_authenticated:
-        return redirect('accounts:userlist')
+        return redirect('movies:index')
     if request.method == "POST":
         form = AuthenticationForm(request, request.POST)
         if form.is_valid():
             auth_login(request, form.get_user())
-            return redirect(request.GET.get('next') or 'accounts:userlist')
+            return redirect(request.GET.get('next') or 'movies:index')
     else:
         form = AuthenticationForm()
     context = {'form': form}
@@ -49,4 +49,4 @@ def login(request):
 
 def logout(request):
     auth_logout(request)
-    return redirect('accounts:userlist')
+    return redirect('movies:index')

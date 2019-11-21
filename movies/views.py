@@ -3,21 +3,27 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Movie, Genre, Review
 from .forms import MovieForm, ReviewForm
+from accounts.models import User
 from django.views.decorators.http import require_POST
 
 # Create your views here.
+
+
 def index(request):
     movies = Movie.objects.all()
-    context = {'movies': movies,}
+    context = {'movies': movies, }
     return render(request, 'movies/index.html', context)
+
 
 def detail(request, movie_pk):
     movie = get_object_or_404(Movie, pk=movie_pk)
     reviews = movie.review_set.all()
     review_form = ReviewForm()
     genres = movie.genres.all()
-    context = {'movie': movie, 'reviews':reviews, 'review_form':review_form, 'genres': genres,}
+    context = {'movie': movie, 'reviews': reviews,
+               'review_form': review_form, 'genres': genres, }
     return render(request, 'movies/detail.html', context)
+
 
 @require_POST
 def reviews_create(request, movie_pk):
@@ -30,6 +36,7 @@ def reviews_create(request, movie_pk):
             review.save()
     return redirect('movies:detail', movie_pk)
 
+
 @require_POST
 def reviews_delete(request, movie_pk, review_pk):
     if request.user.is_authenticated:
@@ -37,6 +44,7 @@ def reviews_delete(request, movie_pk, review_pk):
         if request.user == review.user:
             review.delete()
         return redirect('movies:detail', movie_pk)
+
 
 @login_required
 def like(request, movie_pk):
@@ -46,3 +54,15 @@ def like(request, movie_pk):
     else:
         movie.like_users.add(request.user)
     return redirect('movies:index')
+
+
+@login_required
+def follow(request, user_pk):
+    person = get_object_or_404(User, pk=user_pk)
+    user = request.user
+    if person != user:
+        if person.followers.filter(pk=user.pk).exists():
+            person.followers.remove(user)
+        else:
+            person.followers.add(user)
+    return redirect('accounts:userdetail', user_pk)
