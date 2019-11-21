@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>{{ user.username }} 님의 상세 보기</h2>
+  <hr>
+  <h4>{{ user.username }} 님이 리뷰한 영화들</h4>
+  {% for review in user.review_set.all %}
+  <p>영화 : {{ review.movie }}</p>
+  <p>한 줄 평 :{{ review.content }}</p>
+  <p>평점 : {{ review.score }}</p>
+  {% endfor %}
+  <hr>
+  <h4>{{ user.username }} 님이 좋아요한 영화</h4>
+  {% for movie in user.like_movies.all  %}
+  <ul>
+    <li>{{ movie }}</li>
+  </ul>
+  {% endfor %}
+  <hr>
+  <h1>FOLLOW 구현하기</h1>
+</body>
+
+</html>

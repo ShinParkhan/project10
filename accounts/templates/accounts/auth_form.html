@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  {% if request.resolver_match.url_name == 'signup' %}
+  <h1>회원가입</h1>
+  {% elif request.resolver_match.url_name == 'login' %}
+  <h1>로그인</h1>
+  {% endif %}
+  <form method="POST">
+    {% csrf_token %}
+    <p>{{ form }}</p>
+
+    {% if request.resolver_match.url_name == 'signup' %}
+    <input type="submit" value="회원가입">
+    {% elif request.resolver_match.url_name == 'login' %}
+    <input type="submit" value="로그인">
+    {% endif %}
+  </form>
+</body>
+
+</html>

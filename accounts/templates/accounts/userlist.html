@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>유저 목록입니다.</h2>
+  {% if user.is_authenticated %}
+  <h3>환영합니다. {{ user }}님</h3>
+  {% else %}
+  <h3>로그인해주십시오.</h3>
+  {% endif %}
+  <ul>
+    {% for user in users  %}
+    <li><a href="{% url 'accounts:userdetail' user.pk %}">{{ user.username }}</a></li>
+    <br>
+    {% endfor %}
+  </ul>
+</body>
+
+</html>
